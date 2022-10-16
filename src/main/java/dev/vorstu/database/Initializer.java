@@ -72,7 +72,7 @@ public class Initializer {
         );
         userInfoRepository.save(someuserInfo);
 
-        ChatEntity chat = new ChatEntity();
+        ChatEntity chat = new ChatEntity("TestingChat");
         chatRepository.save(chat);
 
         MessageEntity message = new MessageEntity("hello", chat, lisophoriaInfo);

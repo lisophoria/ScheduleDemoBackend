@@ -20,6 +20,8 @@ import java.util.List;
 @NoArgsConstructor
 public class ChatEntity extends BaseEntity {
 
+    String name;
+
     @OneToMany(
             mappedBy = "chat",
             cascade = CascadeType.ALL,
@@ -28,4 +30,7 @@ public class ChatEntity extends BaseEntity {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<MessageEntity> messages = new ArrayList<>();
 
+    public ChatEntity(String name) {
+        this.name = name;
+    }
 }
