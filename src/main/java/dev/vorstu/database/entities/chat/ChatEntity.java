@@ -1,6 +1,5 @@
 package dev.vorstu.database.entities.chat;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.vorstu.database.entities.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +22,7 @@ public class ChatEntity extends BaseEntity {
 
     String name;
 
-    @JsonIgnore
+//    @JsonIgnore
     @OneToMany(
             mappedBy = "chat",
             cascade = CascadeType.ALL,

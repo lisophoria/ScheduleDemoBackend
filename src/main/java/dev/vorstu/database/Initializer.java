@@ -75,6 +75,9 @@ public class Initializer {
         ChatEntity chat = new ChatEntity("TestingChat");
         chatRepository.save(chat);
 
+        ChatEntity chat_2 = new ChatEntity("chat2");
+        chatRepository.save(chat_2);
+
         for (int i = 0; i < 10; i++) {
             MessageEntity message = new MessageEntity("hello" + i, chat, lisophoriaInfo);
             messageRepository.save(message);
